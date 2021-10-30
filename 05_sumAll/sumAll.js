@@ -1,5 +1,9 @@
 const sumAll = function(firstNumber, secondNumber) {
-  if (firstNumber == secondNumber) {
+  if (typeof(firstNumber) != "number" || typeof(secondNumber) != "number") {
+    return "ERROR"
+  } else if (firstNumber < 0 || secondNumber < 0) {
+    return "ERROR"
+  } else if (firstNumber == secondNumber) {
     return firstNumber + secondNumber
   } else {
     let differenceBetween = Math.abs(firstNumber - secondNumber)
